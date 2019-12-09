@@ -13,3 +13,4 @@ ffmpeg -i Awake.flac -acodec alac -vcodec copy Awake.m4a
 ```shell
 for f in ./*.flac; do ffmpeg -i $f -acodec alac -vcodec copy ${f%flac}m4a; done
 ```
+上面的命令会将当前文件夹里面的所有 `flac` 结尾的文件都转换为 ALAC 并且将其后缀名改为 `m4a`
