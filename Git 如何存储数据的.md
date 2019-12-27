@@ -50,6 +50,10 @@ watch -d -n 1 tree --charset=ascii -aF
 
 ![](images/2019-12-26-21-16-12.png)
 
+补上一个动图版本
+
+![](images/2019-12-27-16-39-53.gif)
+
 ## 开始 Demo
 
 ### 1. Git init
