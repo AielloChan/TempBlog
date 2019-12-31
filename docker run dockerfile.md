@@ -18,14 +18,14 @@ else
   exit 1
 fi
 
-echo -ne "\r\033[Kbuilding..."
-docker build -t $DOCKERRUN_UUID - < $DOCKERFILE  > /dev/null
-docker run -it --rm $DOCKERRUN_UUID /bin/sh
-echo -ne "\r\033[Kcleaning..."
-docker rmi $DOCKERRUN_UUID > /dev/null
+echo -ne "\r\033[Kbuilding..." && \
+docker build -t $DOCKERRUN_UUID - < $DOCKERFILE  > /dev/null && \
+docker run -it --rm $DOCKERRUN_UUID /bin/sh && \
+echo -ne "\r\033[Kcleaning..." && \
+docker rmi $DOCKERRUN_UUID > /dev/null && \
 echo -ne "\r"
 ```
 
 自动清除构建的 image 和运行中的容器
 
-![](images/2019-12-31 14_18_15.gif)
+![](images/2019-12-31_14_18_15.gif)
